@@ -1,0 +1,49 @@
+{
+  "name": "discord-rp-toolbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "pack": "build --dir",
+    "dist": "electron-packager ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron-packager": "^14.2.1"
+  },
+  "build": {
+    "appId": "discord-rp-toolbox",
+    "category": "discord.rp.toolbox.type",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "NSIS"
+    }
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "latest",
+    "discord-rpc": "latest"
+  }
+}

@@ -18,17 +18,23 @@
     <div class='jumbotron'>
         <div class='container'>
             <h3>Customize your Discord Rich presense!</h3>
-            <form>
-                <input type='text' placeholder="Main Text">
-                <input type='text' placeholder="Small Text">
-                <label for="myfile">Image:</label>
-                <input type="file" id="myfile" name="myfile">
-                <button type='submit'>Change!</button>
-            </form>
-    
+                <input type='text' id='main_text' placeholder="Main Text">
+                <input type='text' id='small_text' placeholder="Small Text">
+                <button type='submit' id='submit' onclick="changeStat()">Change!</button>
         </div>
     
     </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="./changeStatus.js"></script>
+    <script>
+        async function changeStat(){
+            var mainText= document.getElementById("main_text").value;
+            var smallText= document.getElementById("small_text").value;
+            setActivity(mainText, smallText, 69, 'image', 'ss', 'd ', ' d');
+            //$.getScript('./changeStatus.js', function() {
+            //})
+        }
+    </script>
 
     <footer>Made by Windows#0001 <3</footer>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
