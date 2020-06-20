@@ -7,7 +7,7 @@ A simple prgram to display a message with discord rich presence
 ![rp showcase](https://i.imgur.com/X1HOLeK.png)
 
 
-#How to
+# How to
 
 you can make your own app and set it in your config.json file.
 Make your app here: discord.com/developers
